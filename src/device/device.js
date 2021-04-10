@@ -1,14 +1,13 @@
 // import App from "../App"
 import './device.css'
-function Device(){
+function Device(props){
     return (
         <div>
             <section className='box'>
-            <h1>Sensor name</h1>
-            <img src='#'></img>
-            <h4>Sensor description</h4>
-            <p>Description of what sensor actualy does
-                yada yada yada
+            <h1>{props.name}</h1>
+            <img src={props.img}></img>
+            <h4>Sensor description {}</h4>
+            <p>{props.desc}
             </p>
             <button>Read more</button>
             <button>Goto sensor page</button>
