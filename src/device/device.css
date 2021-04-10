@@ -1,0 +1,10 @@
+.box{
+    width:auto;
+    height:300px;
+    background-color:lightslategray;
+}
+
+.img {
+    width: 50%;
+    height: 50%;
+}
