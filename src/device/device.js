@@ -1,17 +1,19 @@
-// import App from "../App"
+import App from "../App"
 import './device.css'
-function Device(props){
+
+function Device({sensors}) {
     return (
         <div>
-            <section className='box'>
-            <h1>{props.name}</h1>
-            <img src={props.img}></img>
-            <h4>Sensor description {}</h4>
-            <p>{props.desc}
-            </p>
-            <button>Read more</button>
-            <button>Goto sensor page</button>
-            </section>
+            {sensors.map((sensor) => {
+                const {id, name, img, desc} = sensor;
+                return <article key={id} className='box'>
+                    <h1> {name}</h1>
+                    <img src={img}className='img'/>
+                    <p>{desc}</p>
+                    <button> Read more</button>
+                    <button> Goto sensor page</button>
+                </article>
+            })}
         </div>
     )
 }
